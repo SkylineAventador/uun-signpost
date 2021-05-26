@@ -1,12 +1,12 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import {Box} from "@chakra-ui/react";
+import {Box, Flex, Heading, Spacer} from "@chakra-ui/react";
 
 export const siteTitle = 'Unicorn University signpost'
 
 export default function Layout({ children, home }) {
     return (
-        <Box>
+        <Flex direction={"column"} wrap={"nowrap"} minH={"100vh"} bg={"purple.50"}>
             <Head>
                 <link rel="icon" href="/favicon.ico" />
                 <meta
@@ -22,6 +22,7 @@ export default function Layout({ children, home }) {
                 <meta name="og:title" content={siteTitle} />
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
+            <Heading size={"xl"} minH={"15vh"} bg={"lavender"}>Header</Heading>
             {children}
             {!home && (
                 <Box>
@@ -30,6 +31,8 @@ export default function Layout({ children, home }) {
                     </Link>
                 </Box>
             )}
-        </Box>
+            <Spacer/>
+            <Heading size={"xl"} minH={"10vh"} bg={"lavender"}>Footer</Heading>
+        </Flex>
     )
 }
