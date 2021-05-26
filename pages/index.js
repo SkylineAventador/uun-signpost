@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import {Button, ButtonGroup, Center, Heading, Stack} from "@chakra-ui/react";
+import {Button, ButtonGroup, Center, Heading, Stack, Link, Image, Box} from "@chakra-ui/react";
 
 export default function Home() {
     return (
@@ -11,10 +11,15 @@ export default function Home() {
             </Head>
             <Stack direction={"column"} align={"center"} spacing={"3rem"}>
                 <Heading color={"whitesmoke"} size={"4xl"}>Welcome to the Unicorn University signpost page</Heading>
-                <ButtonGroup spacing={"3rem"} size={"lg"}>
+                <ButtonGroup spacing={"3rem"} size={"lg"} alignItems={"center"}>
                     <Button colorScheme={"purple"}>Enter</Button>
                     <Button colorScheme={"pink"}>About</Button>
+                    <Link href={"https://google.cz"} isExternal color={"white"}>Unicorn University</Link>
                 </ButtonGroup>
+                <Box>
+                    <Image src="https://picsum.photos/640/480?grayscale" borderRadius={"full"} objectFit={"cover"}
+                           alt="Random Image"/>
+                </Box>
             </Stack>
         </Center>
     )
