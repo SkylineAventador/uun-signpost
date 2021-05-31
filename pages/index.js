@@ -2,8 +2,18 @@ import Head from 'next/head'
 import {Center, Heading, Grid, Box, Text, Image, AspectRatio, Flex, Link, GridItem} from "@chakra-ui/react";
 import Layout, {siteTitle} from "../components/layout";
 import CourseBox from "../components/courseBox";
+import {getSortedCoursesData} from "../lib/courses";
 
-export default function Home() {
+export async function getStaticProps() {
+    const allCoursesData = getSortedCoursesData()
+    return {
+        props: {
+            allCoursesData
+        }
+    }
+}
+
+export default function Home({allCoursesData}) {
     return (
         <Layout home>
             <Box p={5}>
@@ -13,18 +23,15 @@ export default function Home() {
                     <link rel="icon" href="/favicon.ico"/>
                 </Head>
                 <Heading size={"2xl"} mb={5}>Dostupné předměty</Heading>
-                <Text fontSize={"2xl"} color={"gray.500"} mb={5}>Vyberte si jeden z předmětů pro zobrazení jeho detailů</Text>
+                <Text fontSize={"2xl"} color={"gray.500"} mb={5}>Vyberte si jeden z předmětů pro zobrazení jeho
+                    detailů</Text>
                 <Grid templateColumns="repeat(auto-fill, minmax(250px, 1fr))"
                       autoRows="minmax(250px, auto)" gap={6}>
-                    <CourseBox/>
-                    <CourseBox/>
-                    <CourseBox/>
-                    <CourseBox/>
-                    <CourseBox/>
-                    <CourseBox/>
-                    <CourseBox/>
-                    <CourseBox/>
-                    <CourseBox/>
+                    {allCoursesData.map(({id, courses}) => {
+                        courses.courses.forEach(element => {
+                            <CourseBox name={element.name} link={element.link}/>
+                        })
+                    })}
                 </Grid>
             </Box>
         </Layout>

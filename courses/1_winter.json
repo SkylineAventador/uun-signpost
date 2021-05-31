@@ -1,5 +1,15 @@
 {
-  "name" : "Architektura cloudovych aplikaci",
-  "semester" : 2,
-  "link" : "/courses/architektura-cloudovych-aplikaci"
+  "courses": [
+    {
+      "name": "Architektura cloudovych aplikaci",
+      "semester": 2,
+      "link": "/courses/architektura-cloudovych-aplikaci"
+    },
+    {
+      "name": "Matematicka analyza",
+      "semester": 2,
+      "link": "/courses/matematicka-analyza"
+    }
+  ]
 }
+
