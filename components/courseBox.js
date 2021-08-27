@@ -6,8 +6,8 @@ import LinkNext from 'next/link'
 export default function CourseBox(props){
     return(
         <GridItem position={"relative"} boxShadow={"2xl"}
-             backgroundSize={"cover"} backgroundPosition={"center"} backgroundRepeat={"no-repeat"} borderRadius={"xl"}>
-            <Flex direction={"column"} position={"absolute"} background={"pink.50"} w={"100%"}
+             backgroundSize={"cover"} backgroundPosition={"center"} backgroundRepeat={"no-repeat"} borderRadius={"xl"} border={"solid"}>
+            <Flex direction={"column"} position={"absolute"} background={"yellow.50"} w={"100%"}
                   h={"100%"} justify={"center"} align={"center"} textAlign={"center"} borderRadius={"xl"} p={2}>
                 <LinkNext href="/" passHref>
                     <Link color={"black"} fontSize={["1rem", "1.5rem", "2rem"]} isExternal

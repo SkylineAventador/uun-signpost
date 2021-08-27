@@ -2,20 +2,20 @@ import Head from 'next/head'
 import {Center, Heading, Grid, Box, Text, Image, AspectRatio, Flex, Link, GridItem} from "@chakra-ui/react";
 import Layout, {siteTitle} from "../components/layout";
 import CourseBox from "../components/courseBox";
-import {getSortedCoursesData} from "../lib/courses";
+import {getCoursesData} from "../lib/courses";
 
 export async function getStaticProps() {
-    const allCoursesData = getSortedCoursesData()
+    const coursesData = getCoursesData();
   // const res = await fetch('https://jsonplaceholder.typicode.com/users');
   // const usersData = await res.json();
     return {
         props: {
-            allCoursesData
+            Courses: coursesData
         }
     }
 }
 
-export default function Home({allCoursesData}) {
+export default function Home({Courses}) {
     return (
         <Layout home>
             <Box p={5}>
@@ -30,7 +30,7 @@ export default function Home({allCoursesData}) {
                 <Grid templateColumns="repeat(auto-fill, minmax(250px, 1fr))"
                       autoRows="minmax(250px, auto)" gap={6}>
                     {
-                      allCoursesData[0].courses.map(course => (<CourseBox name={course.name} link={course.link}/>))
+                      Courses.coursesData.map(course => (<CourseBox name={course.name} link={course.link}/>))
                     }
                 </Grid>
             </Box>

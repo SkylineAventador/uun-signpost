@@ -1,21 +1,21 @@
 [
-    {
-      "id": 1,
-      "name": "Architektura cloudovych aplikaci",
-      "semester": 2,
-      "link": "/courses/architektura-cloudovych-aplikaci"
-    },
-    {
-      "id": 2,
-      "name": "Matematicka analyza",
-      "semester": 2,
-      "link": "/courses/matematicka-analyza"
-    },
-    {
-      "id": 3,
-      "name": "Testovaci predmet",
-      "semester": 1,
-      "link": "/courses/testovaci-predmet"
-    }
+  {
+    "id": 1,
+    "name": "Architektura cloudovych aplikaci",
+    "semester": 2,
+    "link": "/courses/architektura-cloudovych-aplikaci"
+  },
+  {
+    "id": 2,
+    "name": "Matematicka analyza",
+    "semester": 2,
+    "link": "/courses/matematicka-analyza"
+  },
+  {
+    "id": 3,
+    "name": "Testovaci predmet",
+    "semester": 1,
+    "link": "/courses/testovaci-predmet"
+  }
 ]
 
