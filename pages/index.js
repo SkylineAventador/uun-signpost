@@ -35,7 +35,7 @@ export default function Home({Courses}) {
         {/*</Grid>*/}
         <Grid autoRows={"minmax(250px, auto)"} templateColumns={"repeat(4, 1fr)"} gap={6}>
           <GridItem colSpan={4}>
-            <CourseBox name={"Předměty"} link={"/predmety-obory"} fontSize={"5rem"}/>
+            <CourseBox name={"Předměty"} link={"/study_programs"} fontSize={"5rem"}/>
           </GridItem>
           <GridItem colSpan={1}>
             <CourseBox name={"Karta studenta"} link={"/"} bgColor={"gray.500"}/>
