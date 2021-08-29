@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import Link from 'next/link'
-import {Box, Flex, Heading, Spacer} from "@chakra-ui/react";
+import NextLink from 'next/link'
+import {Box, Flex, Heading, Link, Spacer} from "@chakra-ui/react";
 
 export const siteTitle = 'Unicorn University signpost'
 
@@ -26,13 +26,15 @@ export default function Layout({ children, home }) {
             {children}
             {!home && (
                 <Box>
-                    <Link href="/">
+                    <NextLink href="/">
                         <a>← Back to home</a>
-                    </Link>
+                    </NextLink>
                 </Box>
             )}
             <Spacer/>
-            <Heading size={"xl"} minH={"10vh"} bg={"lavender"}>Footer</Heading>
+            <Heading size={"md"} minH={"5vh"} bg={"lavender"}>
+              <Link href={"https://linktr.ee/skylineaventador"} isExternal>Created by SkylineAventador</Link>
+            </Heading>
         </Flex>
     )
 }

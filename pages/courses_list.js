@@ -15,7 +15,7 @@ export async function getStaticProps() {
   }
 }
 
-export default function CoursesPage({Courses}) {
+export default function Courses_list({Courses}) {
   return (
     <Layout>
       <Box p={5}>
@@ -26,7 +26,7 @@ export default function CoursesPage({Courses}) {
         </Head>
         <VStack spacing={4} align={"stretch"}>
           {
-            Courses.coursesData.map(course=>(<CourseBox name={course.name} link={"/"}/>))
+            Courses.coursesData.map(course => (<CourseBox name={course.name} link={course.link}/>))
           }
         </VStack>
       </Box>

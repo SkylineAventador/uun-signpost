@@ -13,7 +13,7 @@ export default function StudyYears() {
           <link rel="icon" href="/favicon.ico"/>
         </Head>
         <SimpleGrid columns={2} autoRows={"minmax(250px, 1fr)"} spacing="40px">
-          <CourseBox name={"1. ročník"} link={"/coursesPage"}/>
+          <CourseBox name={"1. ročník"} link={"/courses_list"}/>
           <CourseBox name={"2. ročník"} link={"/"}/>
           <CourseBox name={"3. ročník"} link={"/"}/>
           <CourseBox name={"4. ročník"} link={"/"}/>

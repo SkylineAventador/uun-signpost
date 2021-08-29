@@ -2,20 +2,8 @@ import Head from 'next/head'
 import {Box, Grid, GridItem} from "@chakra-ui/react";
 import Layout, {siteTitle} from "../components/layout";
 import CourseBox from "../components/courseBox";
-import {getCoursesData} from "../lib/courses";
 
-export async function getStaticProps() {
-  const coursesData = getCoursesData();
-  // const res = await fetch('https://jsonplaceholder.typicode.com/users');
-  // const usersData = await res.json();
-  return {
-    props: {
-      Courses: coursesData
-    }
-  }
-}
-
-export default function Home({Courses}) {
+export default function Home() {
   return (
     <Layout home>
       <Box p={5}>
@@ -33,12 +21,9 @@ export default function Home({Courses}) {
         {/*      Courses.coursesData.map(course => (<CourseBox name={course.name} link={course.link}/>))*/}
         {/*    }*/}
         {/*</Grid>*/}
-        <Grid autoRows={"minmax(250px, auto)"} templateColumns={"repeat(4, 1fr)"} gap={6}>
-          <GridItem colSpan={4}>
+        <Grid autoRows={"minmax(250px, auto)"} templateColumns={"repeat(3, 1fr)"} gap={6}>
+          <GridItem colSpan={3}>
             <CourseBox name={"Předměty"} link={"/study_programs"} fontSize={"5rem"}/>
-          </GridItem>
-          <GridItem colSpan={1}>
-            <CourseBox name={"Karta studenta"} link={"/"} bgColor={"gray.500"}/>
           </GridItem>
           <GridItem colSpan={1}>
             <CourseBox name={"Rozvrh předmětů"} link={"/"}/>
