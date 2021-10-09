@@ -1,4 +1,4 @@
-import {Badge, Box, Divider, Grid, GridItem, Heading, Text} from "@chakra-ui/react";
+import {Badge, Box, Divider, Flex, Grid, GridItem, Heading, HStack, Text} from "@chakra-ui/react";
 import Head from "next/head";
 import Layout from "../components/layout";
 import CourseBox from "../components/courseBox";
@@ -16,9 +16,9 @@ export default function StudyPrograms() {
         <Text fontSize={"2xl"} color={"gray.500"}>Vyberte si jeden z predmetu pro presmerovani na jeho stranku.
           Pozor: Uzivatel musi byt prihlasen v systemu Plus4U.</Text>
 
-        <Grid templateColumns={"repeat(2, 1fr)"} autoRows gap={4} py={5}>
+        <Grid templateColumns={"repeat(2, 1fr)"} gap={4} py={5}>
 
-          <Grid templateColumns={"repeat(2, 1fr)"} autoRows gap={4} alignContent={"start"}
+          <Grid templateColumns={"repeat(2, 1fr)"} gap={4} alignContent={"start"}
                 justifyItems={"stretch"} textAlign={"center"}>
             <GridItem colSpan={2}>
               <Heading fontSize={"4xl"} color={"orange.500"}>Softwarovy vyvoj</Heading>
@@ -35,7 +35,7 @@ export default function StudyPrograms() {
               3</Box>
           </Grid>
 
-          <Grid templateColumns={"repeat(2, 1fr)"} autoRows gap={4} alignContent={"start"} justifyItems={"stretch"}
+          <Grid templateColumns={"repeat(2, 1fr)"}  gap={4} alignContent={"start"} justifyItems={"stretch"}
                 textAlign={"center"}>
             <GridItem colSpan={2}>
               <Heading fontSize={"4xl"} color={"blue.500"}>Business Management</Heading>
@@ -55,40 +55,21 @@ export default function StudyPrograms() {
             <Divider/>
           </GridItem>
 
-          <Grid templateColumns={"repeat(2, 1fr)"} autoRows gap={4} alignContent={"start"} justifyItems={"stretch"}
-                textAlign={"center"}>
-            <GridItem colSpan={2}>
-              <Heading fontSize={"4xl"} color={"gray.500"}>Povinne-volitelne</Heading>
-            </GridItem>
-            <Box bg={"gray.300"} color={"blackAlpha.700"} fontWeight={"bold"} borderRadius={"full"} p={2}>Rusky jazyk
-              1</Box>
-            <Box bg={"gray.300"} color={"blackAlpha.700"} fontWeight={"bold"} borderRadius={"full"} p={2}>3D modely a
-              tisk</Box>
-            <Box bg={"gray.300"} color={"blackAlpha.700"} fontWeight={"bold"} borderRadius={"full"} p={2}>Priprava na
-              Cambridge English first 1</Box>
-            <Box bg={"gray.300"} color={"blackAlpha.700"} fontWeight={"bold"} borderRadius={"full"} p={2}>Time & stress
-              management</Box>
-            <Box bg={"gray.300"} color={"blackAlpha.700"} fontWeight={"bold"} borderRadius={"full"} p={2}>Nemecky jazyk
-              1</Box>
-            <Box bg={"gray.300"} color={"blackAlpha.700"} fontWeight={"bold"} borderRadius={"full"} p={2}>Matematicky
-              proseminar</Box>
-            <Box bg={"gray.300"} color={"blackAlpha.700"} fontWeight={"bold"} borderRadius={"full"} p={2}>Zabavna
-              matematika</Box>
-          </Grid>
-          <Grid templateColumns={"repeat(2, 1fr)"} autoRows gap={4} alignContent={"start"} justifyItems={"stretch"}
-                textAlign={"center"}>
-            <GridItem colSpan={2}>
-              <Heading fontSize={"4xl"} color={"gray.500"}>Volitelne</Heading>
-            </GridItem>
-            <Box bg={"gray.300"} color={"blackAlpha.700"} fontWeight={"bold"} borderRadius={"full"} p={2}>Testovaci
-              predmet 1</Box>
-            <Box bg={"gray.300"} color={"blackAlpha.700"} fontWeight={"bold"} borderRadius={"full"} p={2}>Testovaci
-              predmet 2</Box>
-            <Box bg={"gray.300"} color={"blackAlpha.700"} fontWeight={"bold"} borderRadius={"full"} p={2}>Testovaci
-              predmet 3</Box>
-            <Box bg={"gray.300"} color={"blackAlpha.700"} fontWeight={"bold"} borderRadius={"full"} p={2}>Testovaci
-              predmet 4</Box>
-          </Grid>
+          <GridItem colSpan={2}>
+            <Grid templateColumns={"repeat(2, 1fr)"}  gap={4} alignContent={"start"} justifyItems={"stretch"}
+                  textAlign={"center"}>
+              <GridItem colSpan={2}>
+                <Heading fontSize={"4xl"} color={"gray.500"}>Volitelne</Heading>
+              </GridItem>
+              <Box bg={"gray.300"} color={"blackAlpha.700"} fontWeight={"bold"} borderRadius={"full"} p={2}>Rusky jazyk 1</Box>
+              <Box bg={"gray.300"} color={"blackAlpha.700"} fontWeight={"bold"} borderRadius={"full"} p={2}>Nemecky jazyk 1</Box>
+              <Box bg={"gray.300"} color={"blackAlpha.700"} fontWeight={"bold"} borderRadius={"full"} p={2}>Zabavna matematika 1</Box>
+              <Box bg={"gray.300"} color={"blackAlpha.700"} fontWeight={"bold"} borderRadius={"full"} p={2}>Time & stress management</Box>
+              <Box bg={"gray.300"} color={"blackAlpha.700"} fontWeight={"bold"} borderRadius={"full"} p={2}>Matematicky proseminar</Box>
+              <Box bg={"gray.300"} color={"blackAlpha.700"} fontWeight={"bold"} borderRadius={"full"} p={2}>3D modely a tisk</Box>
+              <Box bg={"gray.300"} color={"blackAlpha.700"} fontWeight={"bold"} borderRadius={"full"} p={2}>Cambridge English 1</Box>
+            </Grid>
+          </GridItem>
         </Grid>
       </Box>
     </Layout>
