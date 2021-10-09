@@ -1,7 +1,7 @@
-import {Badge, Box, Divider, Flex, Grid, GridItem, Heading, HStack, Text} from "@chakra-ui/react";
+import {Alert, AlertIcon, Box, Divider, Grid, GridItem, Heading, Link, Text} from "@chakra-ui/react";
 import Head from "next/head";
 import Layout from "../components/layout";
-import CourseBox from "../components/courseBox";
+import LinkNext from 'next/link';
 
 export default function StudyPrograms() {
   return (
@@ -13,18 +13,28 @@ export default function StudyPrograms() {
           <link rel="icon" href="/favicon.ico"/>
         </Head>
         <Heading as={"h2"} size={"2xl"}>Seznam dostupnych predmetu</Heading>
-        <Text fontSize={"2xl"} color={"gray.500"}>Vyberte si jeden z predmetu pro presmerovani na jeho stranku.
-          Pozor: Uzivatel musi byt prihlasen v systemu Plus4U.</Text>
+        <Text fontSize={"2xl"} color={"gray.500"}>Vyberte si jeden z predmetu pro presmerovani na jeho stranku.</Text>
+        <Alert status={"info"}>
+          <AlertIcon/>
+          Pozor: Zkontrolujte si prosim, zda jste prihlaseni do systemu Plus4U.
+        </Alert>
+        <Alert status={"warning"} variant={"left-accent"}>
+          <AlertIcon/>
+          Jsou zobrazovany jen predmety pro 2. rocnik denniho studia ak. roku 2021/22 a volitelne predmety.
+        </Alert>
 
-        <Grid templateColumns={"repeat(2, 1fr)"} gap={4} py={5}>
+        <Grid templateColumns={"repeat(2, minmax(auto, 1fr))"} gap={4} py={5}>
 
-          <Grid templateColumns={"repeat(2, 1fr)"} gap={4} alignContent={"start"}
+          <Grid templateColumns={"repeat(2, minmax(auto, 1fr))"} gap={4} alignContent={"start"}
                 justifyItems={"stretch"} textAlign={"center"}>
             <GridItem colSpan={2}>
               <Heading fontSize={"4xl"} color={"orange.500"}>Softwarovy vyvoj</Heading>
             </GridItem>
-            <Box bg={"yellow.300"} color={"blackAlpha.700"} fontWeight={"bold"} borderRadius={"full"} p={2}>Frontendove
-              systemy</Box>
+            <Box bg={"yellow.300"} color={"blackAlpha.700"} fontWeight={"bold"} borderRadius={"full"} p={2}>
+              <LinkNext href={"https://google.com"} passHref>
+                <Link isExternal>Frontendove systemy</Link>
+              </LinkNext>
+            </Box>
             <Box bg={"blue.300"} color={"white"} fontWeight={"bold"} borderRadius={"full"} p={2}>Diskretni
               matematika</Box>
             <Box bg={"green.300"} color={"white"} fontWeight={"bold"} borderRadius={"full"} p={2}>Projektovy
@@ -35,7 +45,7 @@ export default function StudyPrograms() {
               3</Box>
           </Grid>
 
-          <Grid templateColumns={"repeat(2, 1fr)"}  gap={4} alignContent={"start"} justifyItems={"stretch"}
+          <Grid templateColumns={"repeat(2, minmax(auto, 1fr))"}  gap={4} alignContent={"start"} justifyItems={"stretch"}
                 textAlign={"center"}>
             <GridItem colSpan={2}>
               <Heading fontSize={"4xl"} color={"blue.500"}>Business Management</Heading>
