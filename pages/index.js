@@ -1,7 +1,8 @@
 import Head from 'next/head'
-import {Box, Grid, GridItem} from "@chakra-ui/react";
+import {Box, Center, Grid, GridItem, Heading, Link, Text, VStack} from "@chakra-ui/react";
 import Layout, {siteTitle} from "../components/layout";
 import CourseBox from "../components/courseBox";
+import LinkNext from "next/link";
 
 export default function Home() {
   return (
@@ -29,7 +30,20 @@ export default function Home() {
             <CourseBox name={"Rozvrh předmětů"} link={"/"}/>
           </GridItem>
           <GridItem colSpan={1}>
-            <CourseBox name={"Termíny zkoušek"} link={"/"}/>
+            <Center border={"solid"} borderRadius={"xl"} bg={"gray.100"} w={"100%"} h={"100%"}>
+              <VStack>
+                {/*<LinkNext href={"/"} passHref>*/}
+                {/*  <Link color={"black"} fontSize={"2rem"} isExternal={false}*/}
+                {/*        noOfLines={5} placeContent={"center"}>Termíny zkoušek</Link>*/}
+                {/*</LinkNext>*/}
+                <Box>
+                  <Heading fontSize={"lg"} color={"gray.500"}>Terminy zkousek</Heading>
+                </Box>
+                <Box>
+                  <Text color={"gray.500"} fontSize={"sm"}>Budou zverejneny pozdeji v prubehu semestru</Text>
+                </Box>
+              </VStack>
+            </Center>
           </GridItem>
           <GridItem colSpan={1}>
             <CourseBox name={"UUN Home page"} link={"https://unicornuniversity.net"} external/>
