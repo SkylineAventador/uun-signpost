@@ -2,7 +2,7 @@ import Head from 'next/head'
 import {
   Alert,
   AlertIcon,
-  Avatar,
+  Avatar, Badge,
   Box,
   Center,
   Flex,
@@ -56,10 +56,10 @@ export default function Home() {
                 {/*        noOfLines={5} placeContent={"center"}>Termíny zkoušek</Link>*/}
                 {/*</LinkNext>*/}
                 <Box>
-                  <Heading fontSize={"lg"}>Terminy zkousek</Heading>
+                  <Heading fontSize={"lg"}>Terminy zkousek <Badge colorScheme={"telegram"}>Waiting</Badge></Heading>
                 </Box>
                 <Box>
-                  <Text fontSize={"sm"}>Budou zverejneny pozdeji v prubehu semestru</Text>
+                  <Text fontSize={"sm"}>Ceka se na zverejneni terminu studijnim oddelenim</Text>
                 </Box>
               </VStack>
             </Center>
@@ -77,6 +77,7 @@ export default function Home() {
                 <LinkNext href={"/o-nas"} passHref>
                   <Link fontSize={"2rem"} color={"blackAlpha.700"}>O nas</Link>
                 </LinkNext>
+                <Badge colorScheme={"orange"} fontSize={"0.8em"} ml={1}>In progress</Badge>
               </Flex>
             </GridItem>
           </VStack>
