@@ -16,6 +16,7 @@ import {
 import Layout, {siteTitle} from "../components/layout";
 import CourseBox from "../components/courseBox";
 import LinkNext from "next/link";
+import {IoShareSocial} from "react-icons/io5";
 
 export default function Home() {
   return (
@@ -80,8 +81,17 @@ export default function Home() {
             <GridItem colSpan={1}>
               <Flex bg={"whiteAlpha.700"} borderRadius={"xl"} justifyContent={"center"} alignItems={"center"} boxShadow={"xl"}>
                 <Avatar size={"sm"} name={"Dmytro Kravtsov"} src={"/Dima_Avatar_Photo.jpg"} mr={2}/>
-                <LinkNext href={"/o-nas"} passHref>
+                <LinkNext href={"#"} passHref>
                   <Link fontSize={"2rem"} color={"blackAlpha.700"}>O nas</Link>
+                </LinkNext>
+                <Badge colorScheme={"orange"} fontSize={"0.8em"} ml={1}>In progress</Badge>
+              </Flex>
+            </GridItem>
+            <GridItem colSpan={1}>
+              <Flex bg={"whiteAlpha.700"} borderRadius={"xl"} justifyContent={"center"} alignItems={"center"} boxShadow={"xl"}>
+                <IoShareSocial />
+                <LinkNext href={"#"} passHref>
+                  <Link fontSize={"2rem"} ml={1} color={"blackAlpha.700"}>Zdroje</Link>
                 </LinkNext>
                 <Badge colorScheme={"orange"} fontSize={"0.8em"} ml={1}>In progress</Badge>
               </Flex>
