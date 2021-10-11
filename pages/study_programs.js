@@ -16,7 +16,9 @@ export default function StudyPrograms() {
         <Text fontSize={"2xl"} color={"gray.500"}>Vyberte si jeden z predmetu pro presmerovani na jeho stranku.</Text>
         <Alert status={"info"}>
           <AlertIcon/>
-          Pozor: Zkontrolujte si prosim, zda jste prihlaseni do systemu Plus4U.
+          <Text fontSize={"md"}>
+            Pozor: Zkontrolujte si prosim, zda jste prihlaseni do systemu Plus4U.
+          </Text>
         </Alert>
         <Alert status={"warning"} variant={"left-accent"}>
           <AlertIcon/>

@@ -1,5 +1,18 @@
 import Head from 'next/head'
-import {Box, Center, Grid, GridItem, Heading, Link, Text, VStack} from "@chakra-ui/react";
+import {
+  Alert,
+  AlertIcon,
+  Avatar,
+  Box,
+  Center,
+  Flex,
+  Grid,
+  GridItem,
+  Heading,
+  Link,
+  Text,
+  VStack
+} from "@chakra-ui/react";
 import Layout, {siteTitle} from "../components/layout";
 import CourseBox from "../components/courseBox";
 import LinkNext from "next/link";
@@ -22,32 +35,51 @@ export default function Home() {
         {/*      Courses.coursesData.map(course => (<CourseBox name={course.name} link={course.link}/>))*/}
         {/*    }*/}
         {/*</Grid>*/}
+        <Alert status={"warning"} variant={"left-accent"} mb={5}>
+          <AlertIcon/>
+          Tyto webove stranky docasne nejsou responzivni pro mobilni zarizeni a ultra-widescreen monitory.
+        </Alert>
         <Grid autoRows={"minmax(250px, auto)"} templateColumns={"repeat(3, 1fr)"} gap={6}>
           <GridItem colSpan={3}>
             <CourseBox name={"Předměty"} link={"/study_programs"} fontSize={"5rem"}/>
           </GridItem>
           <GridItem colSpan={1}>
-            <CourseBox name={"Rozvrh předmětů"} link={"/"}/>
+            <CourseBox name={"Rozvrh předmětů"}
+                       link={"https://uuapp.plus4u.net/uu-dockit-maing02/4e68298f1658473e9bf5692272883290/document/sheet?documentId=611f77b986355500272236c6&sheetId=611f77b986355500272236cb"}
+                       external/>
           </GridItem>
           <GridItem colSpan={1}>
-            <Center border={"solid"} borderRadius={"xl"} bg={"gray.100"} w={"100%"} h={"100%"}>
-              <VStack>
+            <Center borderRadius={"xl"} bg={"whiteAlpha.700"} w={"100%"} h={"100%"} boxShadow={"xl"}>
+              <VStack color={"blackAlpha.700"}>
                 {/*<LinkNext href={"/"} passHref>*/}
                 {/*  <Link color={"black"} fontSize={"2rem"} isExternal={false}*/}
                 {/*        noOfLines={5} placeContent={"center"}>Termíny zkoušek</Link>*/}
                 {/*</LinkNext>*/}
                 <Box>
-                  <Heading fontSize={"lg"} color={"gray.500"}>Terminy zkousek</Heading>
+                  <Heading fontSize={"lg"}>Terminy zkousek</Heading>
                 </Box>
                 <Box>
-                  <Text color={"gray.500"} fontSize={"sm"}>Budou zverejneny pozdeji v prubehu semestru</Text>
+                  <Text fontSize={"sm"}>Budou zverejneny pozdeji v prubehu semestru</Text>
                 </Box>
               </VStack>
             </Center>
           </GridItem>
-          <GridItem colSpan={1}>
-            <CourseBox name={"UUN Home page"} link={"https://unicornuniversity.net"} external/>
-          </GridItem>
+          <VStack alignItems={"stretch"} justifyContent={"space-between"}>
+            <GridItem colSpan={1}>
+              <CourseBox name={"Domovska stranka skoly"} link={"https://unicornuniversity.net"} external/>
+            </GridItem>
+            <GridItem colSpan={1}>
+              <CourseBox name={"Kontakty skoly"} link={"https://unicornuniversity.net/cs/contacts"} external/>
+            </GridItem>
+            <GridItem colSpan={1}>
+              <Flex bg={"whiteAlpha.700"} borderRadius={"xl"} justifyContent={"center"} alignItems={"center"} boxShadow={"xl"}>
+                <Avatar size={"sm"} name={"Dmytro Kravtsov"} src={"/Dima_Avatar_Photo.jpg"} mr={2}/>
+                <LinkNext href={"/o-nas"} passHref>
+                  <Link fontSize={"2rem"} color={"blackAlpha.700"}>O nas</Link>
+                </LinkNext>
+              </Flex>
+            </GridItem>
+          </VStack>
         </Grid>
       </Box>
     </Layout>
