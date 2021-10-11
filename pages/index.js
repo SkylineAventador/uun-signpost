@@ -39,6 +39,12 @@ export default function Home() {
           <AlertIcon/>
           Tyto webove stranky docasne nejsou responzivni pro mobilni zarizeni a ultra-widescreen monitory.
         </Alert>
+        <Alert status={"info"} variant={"left-accent"} mb={5}>
+          <AlertIcon/>
+          <Text fontSize={"1.2em"}>Vsechny vase namety (co opravit, pridat atd.) posilejte, prosim, do kanalu <strong>#napady-na-zlepseni</strong> na nasem
+            <Link href={"https://discord.gg/pFEqzyK"} isExternal fontWeight={"bold"} color={"blue.500"} ml={1}>UUN Discord serveru</Link>
+          </Text>
+        </Alert>
         <Grid autoRows={"minmax(250px, auto)"} templateColumns={"repeat(3, 1fr)"} gap={6}>
           <GridItem colSpan={3}>
             <CourseBox name={"Předměty"} link={"/study_programs"} fontSize={"5rem"}/>

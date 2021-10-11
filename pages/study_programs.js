@@ -22,7 +22,7 @@ export default function StudyPrograms() {
         </Alert>
         <Alert status={"warning"} variant={"left-accent"}>
           <AlertIcon/>
-          Jsou zobrazovany jen predmety pro 2. rocnik denniho studia ak. roku 2021/22 a volitelne predmety.
+          Jsou zobrazovany jen predmety pro 2. rocnik denniho bakalarskeho studia ak. roku 2021/22 a volitelne predmety.
         </Alert>
 
         <Grid templateColumns={"repeat(2, minmax(auto, 1fr))"} gap={4} py={5}>

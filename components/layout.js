@@ -23,7 +23,7 @@ export default function Layout({children, home}) {
         <meta name="og:title" content={siteTitle}/>
         <meta name="twitter:card" content="summary_large_image"/>
       </Head>
-      <Heading size={"xl"} minH={"15vh"} bg={"gray.100"}>Unicorn University rozcestnik</Heading>
+      <Heading size={"xl"} minH={"10vh"} bg={"gray.100"} m={5}>Unicorn University rozcestnik</Heading>
       {children}
       {!home && (
         <Box>
