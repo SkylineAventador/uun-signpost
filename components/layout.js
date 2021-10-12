@@ -34,7 +34,7 @@ export default function Layout({children, home}) {
       )}
       <Spacer/>
       <Heading size={"md"} minH={"5vh"} bg={"gray.100"} m={5}>
-        <LinkNext href={"#"} passHref>
+        <LinkNext href={"/contacts"} passHref>
           <Link fontSize={"1.25rem"}> Created by SkylineAventador (2021)</Link>
         </LinkNext>
         <Badge colorScheme={"orange"} ml={1}>In progress</Badge>
