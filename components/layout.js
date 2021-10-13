@@ -25,19 +25,19 @@ export default function Layout({children, home}) {
       </Head>
       <Heading size={"xl"} minH={"10vh"} bg={"gray.100"} m={5}>Unicorn University rozcestnik</Heading>
       {children}
-      {!home && (
-        <Box>
-          <NextLink href="/">
-            <a>← Back to home</a>
-          </NextLink>
-        </Box>
-      )}
+      {/*{!home && (*/}
+      {/*  <Box bg={"whitesmoke"} borderRadius={"xl"} boxShadow={"xl"} ml={3}>*/}
+      {/*    <NextLink href="/">*/}
+      {/*      <Link fontSize={"1.25rem"} color={"blackAlpha.700"}>Zpet na hlavni</Link>*/}
+      {/*    </NextLink>*/}
+      {/*  </Box>*/}
+      {/*)}*/}
       <Spacer/>
       <Heading size={"md"} minH={"5vh"} bg={"gray.100"} m={5}>
         <LinkNext href={"/contacts"} passHref>
           <Link fontSize={"1.25rem"}> Created by SkylineAventador (2021)</Link>
         </LinkNext>
-        <Badge colorScheme={"orange"} ml={1}>In progress</Badge>
+        <Badge colorScheme={"green"} ml={1}>New</Badge>
         <Text fontSize={"sm"} color={"gray.500"}>Veškera data jsou aktuální na ZS ak. roku 2021/22</Text>
       </Heading>
     </Flex>

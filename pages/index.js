@@ -8,8 +8,8 @@ import {
   Flex,
   Grid,
   GridItem,
-  Heading,
-  Link,
+  Heading, HStack,
+  Link, Stack,
   Text,
   VStack
 } from "@chakra-ui/react";
@@ -29,13 +29,14 @@ export default function Home() {
         </Head>
         <Alert status={"warning"} variant={"left-accent"} mb={5}>
           <AlertIcon/>
-          <Text fontSize={["0.75vw", "1.25em", "2vw"]}>
+          <Text fontSize={["1rem", "1.25rem", "1.5remvw"]}>
             Tyto webove stranky docasne nejsou responzivni pro mobilni zarizeni a ultra-widescreen monitory.
           </Text>
         </Alert>
         <Alert status={"info"} variant={"left-accent"} mb={5}>
           <AlertIcon/>
-          <Text fontSize={["0.75vw", "1.25em", "2vw"]}>Vsechny vase namety (co opravit, pridat atd.) posilejte, prosim, do
+          <Text fontSize={["md", "lg", "xl"]}>Vsechny vase namety (co opravit, pridat atd.) posilejte, prosim,
+            do
             kanalu <strong>#napady-na-zlepseni</strong> na nasem
             <Link href={"https://discord.gg/pFEqzyK"} isExternal fontWeight={"bold"} color={"blue.500"} ml={1}>UUN
               Discord serveru</Link>
@@ -45,18 +46,28 @@ export default function Home() {
           <GridItem colSpan={3}>
             <CourseBox name={"Předměty"} link={"/study_programs"} fontSize={"5rem"}/>
           </GridItem>
-          <GridItem colSpan={1}>
-            <CourseBox name={"Rozvrh předmětů"}
-                       link={"https://uuapp.plus4u.net/uu-dockit-maing02/4e68298f1658473e9bf5692272883290/document/sheet?documentId=611f77b986355500272236c6&sheetId=611f77b986355500272236cb"}
-                       external/>
-          </GridItem>
+          <VStack alignItems={"stretch"}>
+            <GridItem h={"100%"}>
+              <CourseBox name={"Rozvrh předmětů"}
+                         link={"https://uuapp.plus4u.net/uu-dockit-maing02/4e68298f1658473e9bf5692272883290/document/sheet?documentId=611f77b986355500272236c6&sheetId=611f77b986355500272236cb"}
+                         external/>
+            </GridItem>
+            <GridItem>
+              <Stack direction={"row"} bg={"whiteAlpha.700"} borderRadius={"xl"} justifyContent={"center"}
+                     alignItems={"center"}
+                     boxShadow={"xl"}
+                     flexWrap={"wrap"}>
+                <LinkNext href={"#"} passHref>
+                  <Link fontSize={"2rem"} ml={1} color={"blackAlpha.700"}>Novinky</Link>
+                </LinkNext>
+                <Badge colorScheme={"green"} fontSize={"0.8em"} ml={1}>+1</Badge>
+                <Badge colorScheme={"orange"} fontSize={"0.8em"} ml={1}>In progress</Badge>
+              </Stack>
+            </GridItem>
+          </VStack>
           <GridItem colSpan={1}>
             <Center borderRadius={"xl"} bg={"whiteAlpha.700"} w={"100%"} h={"100%"} boxShadow={"xl"}>
               <VStack color={"blackAlpha.700"}>
-                {/*<LinkNext href={"/"} passHref>*/}
-                {/*  <Link color={"black"} fontSize={"2rem"} isExternal={false}*/}
-                {/*        noOfLines={5} placeContent={"center"}>Termíny zkoušek</Link>*/}
-                {/*</LinkNext>*/}
                 <Box>
                   <Heading fontSize={"lg"}>Terminy zkousek <Badge colorScheme={"telegram"}>Waiting</Badge></Heading>
                 </Box>
@@ -90,7 +101,7 @@ export default function Home() {
                 <LinkNext href={"/contacts"} passHref>
                   <Link fontSize={"2rem"} ml={1} color={"blackAlpha.700"}>Kontakt</Link>
                 </LinkNext>
-                <Badge colorScheme={"orange"} fontSize={"0.8em"} ml={1}>In progress</Badge>
+                <Badge colorScheme={"green"} fontSize={"0.8em"} ml={1}>New</Badge>
               </Flex>
             </GridItem>
           </VStack>

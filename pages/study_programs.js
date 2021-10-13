@@ -17,16 +17,15 @@ export default function StudyPrograms() {
         <Alert status={"info"} variant={"left-accent"} mb={2}>
           <AlertIcon/>
           <Text fontSize={"md"}>
-            Pozor: Zkontrolujte si prosim, zda jste prihlaseni do systemu Plus4U.
+            <strong>Pozor:</strong> Zkontrolujte si prosim, zda jste prihlaseni do systemu Plus4U.
           </Text>
         </Alert>
         <Alert status={"warning"} variant={"left-accent"}>
           <AlertIcon/>
-          Jsou zobrazovany jen predmety pro 2. rocnik denniho bakalarskeho studia ak. roku 2021/22 a volitelne predmety.
+          <strong>Docasne:</strong> Jsou zobrazovany jen predmety pro 2. rocnik denniho bakalarskeho studia ak. roku 2021/22 a volitelne predmety.
         </Alert>
 
         <Grid templateColumns={"repeat(2, minmax(auto, 1fr))"} gap={4} py={5}>
-
           <Grid templateColumns={"repeat(2, minmax(auto, 1fr))"} gap={4} alignContent={"start"}
                 justifyItems={"stretch"} textAlign={"center"}>
             <GridItem colSpan={2}>
