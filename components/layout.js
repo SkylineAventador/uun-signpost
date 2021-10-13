@@ -35,7 +35,7 @@ export default function Layout({children, home}) {
       <Spacer/>
       <Heading size={"md"} minH={"5vh"} bg={"gray.100"} m={5}>
         <LinkNext href={"/contacts"} passHref>
-          <Link fontSize={"1.25rem"}> Created by SkylineAventador (2021)</Link>
+          <Link fontSize={["sm", "1.25rem"]}> Created by SkylineAventador (2021)</Link>
         </LinkNext>
         <Badge colorScheme={"green"} ml={1}>New</Badge>
         <Text fontSize={"sm"} color={"gray.500"}>Veškera data jsou aktuální na ZS ak. roku 2021/22</Text>

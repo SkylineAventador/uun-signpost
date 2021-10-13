@@ -30,7 +30,7 @@ export default function Home() {
         <Alert status={"warning"} variant={"left-accent"} mb={5}>
           <AlertIcon/>
           <Text fontSize={["1rem", "1.25rem", "1.5remvw"]}>
-            Tyto webove stranky docasne nejsou responzivni pro mobilni zarizeni a ultra-widescreen monitory.
+            Nektere stranky docasne nejsou responzivni pro mobilni zarizeni a ultra-widescreen monitory.
           </Text>
         </Alert>
         <Alert status={"info"} variant={"left-accent"} mb={5}>
@@ -42,8 +42,8 @@ export default function Home() {
               Discord serveru</Link>
           </Text>
         </Alert>
-        <Grid autoRows={"minmax(250px, auto)"} templateColumns={"repeat(3, 1fr)"} gap={6}>
-          <GridItem colSpan={3}>
+        <Grid autoRows={"minmax(250px, auto)"} templateColumns={"repeat(auto-fill, 1fr)"} gap={6}>
+          <GridItem colSpan={[-1, 3]}>
             <CourseBox name={"Předměty"} link={"/study_programs"} fontSize={"5rem"}/>
           </GridItem>
           <VStack alignItems={"stretch"}>
@@ -60,7 +60,6 @@ export default function Home() {
                 <LinkNext href={"#"} passHref>
                   <Link fontSize={"2rem"} ml={1} color={"blackAlpha.700"}>Novinky</Link>
                 </LinkNext>
-                <Badge colorScheme={"green"} fontSize={"0.8em"} ml={1}>+1</Badge>
                 <Badge colorScheme={"orange"} fontSize={"0.8em"} ml={1}>In progress</Badge>
               </Stack>
             </GridItem>
