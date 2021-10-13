@@ -37,7 +37,6 @@ export default function Layout({children, home}) {
         <LinkNext href={"/contacts"} passHref>
           <Link fontSize={["sm", "1.25rem"]}> Created by SkylineAventador (2021)</Link>
         </LinkNext>
-        <Badge colorScheme={"green"} ml={1}>New</Badge>
         <Text fontSize={"sm"} color={"gray.500"}>Veškera data jsou aktuální na ZS ak. roku 2021/22</Text>
       </Heading>
     </Flex>

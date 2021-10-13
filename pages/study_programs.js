@@ -16,20 +16,23 @@ export default function StudyPrograms() {
         <Text fontSize={"2xl"} color={"gray.500"}>Vyberte si jeden z predmetu pro presmerovani na jeho stranku.</Text>
         <Alert status={"info"} variant={"left-accent"} mb={2}>
           <AlertIcon/>
-          <Text fontSize={"md"}>
+          <Text fontSize={["md", "lg"]}>
             <strong>Pozor:</strong> Zkontrolujte si prosim, zda jste prihlaseni do systemu Plus4U.
           </Text>
         </Alert>
         <Alert status={"warning"} variant={"left-accent"}>
           <AlertIcon/>
-          <strong>Docasne:</strong> Jsou zobrazovany jen predmety pro 2. rocnik denniho bakalarskeho studia ak. roku 2021/22 a volitelne predmety.
+          <Text fontSize={["md", "lg"]}>
+            <strong>Docasne:</strong> Jsou zobrazovany jen predmety pro 2. rocnik denniho bakalarskeho studia ak. roku
+            2021/22 a volitelne predmety.
+          </Text>
         </Alert>
 
         <Grid templateColumns={"repeat(2, minmax(auto, 1fr))"} gap={4} py={5}>
-          <Grid templateColumns={"repeat(2, minmax(auto, 1fr))"} gap={4} alignContent={"start"}
+          <Grid templateColumns={"repeat(2, minmax(auto, 1fr))"} gap={4} alignContent={"space-between"}
                 justifyItems={"stretch"} textAlign={"center"}>
-            <GridItem colSpan={2}>
-              <Heading fontSize={"4xl"} color={"orange.500"}>Softwarovy vyvoj</Heading>
+            <GridItem colSpan={[-1, 2]}>
+              <Heading fontSize={"4xl"} color={"orange.500"} noOfLines={1}>Softwarovy vyvoj</Heading>
             </GridItem>
             <DataBox name={"Diskretni matematika"} link={"https://unicornuniversity.net/cs/discrete-mathematics"}
                      bg={"blue.300"} color={"white"}/>
@@ -45,10 +48,10 @@ export default function StudyPrograms() {
             </GridItem>
           </Grid>
 
-          <Grid templateColumns={"repeat(2, minmax(auto, 1fr))"} gap={4} alignContent={"start"} justifyItems={"stretch"}
+          <Grid templateColumns={"repeat(2, minmax(auto, 1fr))"} gap={4} alignContent={"space-between"} justifyItems={"stretch"}
                 textAlign={"center"}>
-            <GridItem colSpan={2}>
-              <Heading fontSize={"4xl"} color={"blue.500"}>Business Management</Heading>
+            <GridItem colSpan={[-1, 2]}>
+              <Heading fontSize={"4xl"} color={"blue.500"} noOfLines={1}>Business Management</Heading>
             </GridItem>
             <DataBox name={"Diskretni matematika"} link={"https://unicornuniversity.net/cs/discrete-mathematics"}
                      bg={"blue.300"} color={"white"}/>
@@ -72,19 +75,23 @@ export default function StudyPrograms() {
 
           <GridItem colSpan={2}>
             <Grid templateColumns={"repeat(2, 1fr)"} gap={4} alignContent={"start"} justifyItems={"stretch"}
-                  textAlign={"center"}>
-              <GridItem colSpan={2}>
+                  textAlign={"center"} m={2}>
+              <GridItem colSpan={[-1, 2]}>
                 <Heading fontSize={"4xl"} color={"gray.500"}>Volitelne</Heading>
               </GridItem>
-              <DataBox name={"Priprava na Cambridge English first 1"}
+              <DataBox name={"Cambridge English"}
                        link={"https://unicornuniversity.net/cs/preparation-for-cambridge-english-first-1"}/>
               <DataBox name={"3D modely a tisk"} link={"https://unicornuniversity.net/cs/3d-print"}/>
-              <DataBox name={"Rusky jazyk pro zacatecniky"} link={"https://unicornuniversity.net/cs/russian-for-beginners-1"}/>
-              <DataBox name={"Nemecky jazyk pro zacatecniky"} link={"https://unicornuniversity.net/cs/german-for-beginners-1"}/>
-              <DataBox name={"Matematicky proseminar"} link={"https://unicornuniversity.net/cs/essentials-of-mathematics"}/>
+              <DataBox name={"Rusky jazyk"}
+                       link={"https://unicornuniversity.net/cs/russian-for-beginners-1"}/>
+              <DataBox name={"Nemecky jazyk"}
+                       link={"https://unicornuniversity.net/cs/german-for-beginners-1"}/>
+              <DataBox name={"Matematicky proseminar"}
+                       link={"https://unicornuniversity.net/cs/essentials-of-mathematics"}/>
               <DataBox name={"Zabavna matematika"} link={"https://unicornuniversity.net/cs/entertaining-mathematics"}/>
               <GridItem colSpan={2}>
-                <DataBox name={"Time & stress management"} link={"https://unicornuniversity.net/cs/time-and-stress-management"}/>
+                <DataBox name={"Time & stress management"}
+                         link={"https://unicornuniversity.net/cs/time-and-stress-management"}/>
               </GridItem>
             </Grid>
           </GridItem>
@@ -96,7 +103,7 @@ export default function StudyPrograms() {
   function DataBox(props) {
     return (
       <Box bg={props.bg || "gray.300"} color={props.color || "blackAlpha.700"} fontWeight={props.fw || "bold"}
-           borderRadius={"full"} p={2}>
+           borderRadius={"full"} p={2} noOfLines={1}>
         <LinkNext href={props.link || "/"} passHref>
           <Link isExternal>{props.name || "Data load error"}</Link>
         </LinkNext>
