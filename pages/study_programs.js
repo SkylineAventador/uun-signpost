@@ -29,46 +29,49 @@ export default function StudyPrograms() {
         </Alert>
 
         <Grid templateColumns={"repeat(2, minmax(auto, 1fr))"} gap={4} py={5}>
-          <Grid templateColumns={"repeat(2, minmax(auto, 1fr))"} gap={4} alignContent={"space-between"}
-                justifyItems={"stretch"} textAlign={"center"}>
-            <GridItem colSpan={2}>
-              <Heading fontSize={"4xl"} color={"orange.500"} noOfLines={1}>Softwarovy vyvoj</Heading>
-            </GridItem>
-            <DataBox name={"Diskretni matematika"} link={"https://unicornuniversity.net/cs/discrete-mathematics"}
-                     bg={"blue.300"} color={"white"}/>
-            <DataBox name={"Frontendove systemy"} link={"https://unicornuniversity.net/cs/frontend-systems"}
-                     bg={"yellow.300"}/>
-            <DataBox name={"Backendove systemy"} link={"https://unicornuniversity.net/cs/backend-systems"}
-                     bg={"orange.300"} color={"white"}/>
-            <DataBox name={"Projektovy management"} link={"https://unicornuniversity.net/cs/project-management-it"}
-                     bg={"green.300"} color={"white"}/>
-            <GridItem colSpan={2}>
+          <GridItem colSpan={[2, 1]}>
+            <Grid templateColumns={"repeat(2, minmax(auto, 1fr))"} gap={4} alignContent={"space-between"}
+                  justifyItems={"stretch"} textAlign={"center"}>
+              <GridItem colSpan={2}>
+                <Heading fontSize={"4xl"} color={"orange.500"}>Softwarovy vyvoj</Heading>
+              </GridItem>
+              <DataBox name={"Diskretni matematika"} link={"https://unicornuniversity.net/cs/discrete-mathematics"}
+                       bg={"blue.300"} color={"white"}/>
+              <DataBox name={"Frontendove systemy"} link={"https://unicornuniversity.net/cs/frontend-systems"}
+                       bg={"yellow.300"}/>
+              <DataBox name={"Backendove systemy"} link={"https://unicornuniversity.net/cs/backend-systems"}
+                       bg={"orange.300"} color={"white"}/>
+              <DataBox name={"Projektovy management"} link={"https://unicornuniversity.net/cs/project-management-it"}
+                       bg={"green.300"} color={"white"}/>
+              <GridItem colSpan={2}>
+                <DataBox name={"Obchodni anglictina 3"} link={"https://unicornuniversity.net/cs/business-english-3"}
+                         bg={"red.300"} color={"white"}/>
+              </GridItem>
+            </Grid>
+          </GridItem>
+          <GridItem colSpan={[2, 1]}>
+            <Grid templateColumns={"repeat(2, minmax(auto, 1fr))"} gap={4} alignContent={"space-between"}
+                  justifyItems={"stretch"}
+                  textAlign={"center"}>
+              <GridItem colSpan={2}>
+                <Heading fontSize={"4xl"} color={"blue.500"}>Business Management</Heading>
+              </GridItem>
+              <DataBox name={"Diskretni matematika"} link={"https://unicornuniversity.net/cs/discrete-mathematics"}
+                       bg={"blue.300"} color={"white"}/>
               <DataBox name={"Obchodni anglictina 3"} link={"https://unicornuniversity.net/cs/business-english-3"}
                        bg={"red.300"} color={"white"}/>
-            </GridItem>
-          </Grid>
-
-          <Grid templateColumns={"repeat(2, minmax(auto, 1fr))"} gap={4} alignContent={"space-between"}
-                justifyItems={"stretch"}
-                textAlign={"center"}>
-            <GridItem colSpan={2}>
-              <Heading fontSize={"4xl"} color={"blue.500"} noOfLines={1}>Business Management</Heading>
-            </GridItem>
-            <DataBox name={"Diskretni matematika"} link={"https://unicornuniversity.net/cs/discrete-mathematics"}
-                     bg={"blue.300"} color={"white"}/>
-            <DataBox name={"Obchodni anglictina 3"} link={"https://unicornuniversity.net/cs/business-english-3"}
-                     bg={"red.300"} color={"white"}/>
-            <DataBox name={"Cross-cultural management"}
-                     link={"https://unicornuniversity.net/cs/cross-cultural-management"}
-                     bg={"orange.300"} color={"white"}/>
-            <DataBox name={"Rizeni podnikovych financi"}
-                     link={"https://unicornuniversity.net/cs/corporate-finance-management"}
-                     bg={"yellow.300"} color={"blackAlpha.700"}/>
-            <GridItem colSpan={2}>
-              <DataBox name={"Makroekonomie"} link={"https://unicornuniversity.net/cs/macroeconomics"}
-                       bg={"green.300"} color={"white"}/>
-            </GridItem>
-          </Grid>
+              <DataBox name={"Cross-cultural management"}
+                       link={"https://unicornuniversity.net/cs/cross-cultural-management"}
+                       bg={"orange.300"} color={"white"}/>
+              <DataBox name={"Rizeni podnikovych financi"}
+                       link={"https://unicornuniversity.net/cs/corporate-finance-management"}
+                       bg={"yellow.300"} color={"blackAlpha.700"}/>
+              <GridItem colSpan={2}>
+                <DataBox name={"Makroekonomie"} link={"https://unicornuniversity.net/cs/macroeconomics"}
+                         bg={"green.300"} color={"white"}/>
+              </GridItem>
+            </Grid>
+          </GridItem>
 
           <GridItem colSpan={2}>
             <Divider/>
@@ -89,7 +92,8 @@ export default function StudyPrograms() {
                        link={"https://unicornuniversity.net/cs/german-for-beginners-1"}/>
               <DataBox name={"Matematicky proseminar"}
                        link={"https://unicornuniversity.net/cs/essentials-of-mathematics"}/>
-              <DataBox name={"Zabavna matematika"} link={"https://unicornuniversity.net/cs/entertaining-mathematics"}/>
+              <DataBox name={"Zabavna matematika"}
+                       link={"https://unicornuniversity.net/cs/entertaining-mathematics"}/>
               <GridItem colSpan={2}>
                 <DataBox name={"Time & stress management"}
                          link={"https://unicornuniversity.net/cs/time-and-stress-management"}/>
@@ -103,12 +107,14 @@ export default function StudyPrograms() {
 
   function DataBox(props) {
     return (
-      <Box bg={props.bg || "gray.300"} color={props.color || "blackAlpha.700"} fontWeight={props.fw || "bold"}
-           borderRadius={"full"} p={2} noOfLines={1}>
-        <LinkNext href={props.link || "/"} passHref>
-          <Link isExternal>{props.name || "Data load error"}</Link>
-        </LinkNext>
-      </Box>
+      <GridItem colSpan={[2, 1]}>
+        <Box bg={props.bg || "gray.300"} color={props.color || "blackAlpha.700"} fontWeight={props.fw || "bold"}
+             borderRadius={"full"} p={2}>
+          <LinkNext href={props.link || "/"} passHref>
+            <Link isExternal>{props.name || "Data load error"}</Link>
+          </LinkNext>
+        </Box>
+      </GridItem>
     );
   }
 }
