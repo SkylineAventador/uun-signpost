@@ -1,4 +1,4 @@
-import {Alert, AlertIcon, Box, Divider, Grid, GridItem, Heading, Link, Text} from "@chakra-ui/react";
+import {Alert, AlertIcon, Box, Divider, Grid, GridItem, Heading, Link, Stack, Text} from "@chakra-ui/react";
 import Head from "next/head";
 import Layout from "../components/layout";
 import LinkNext from 'next/link';
@@ -31,7 +31,7 @@ export default function StudyPrograms() {
         <Grid templateColumns={"repeat(2, minmax(auto, 1fr))"} gap={4} py={5}>
           <Grid templateColumns={"repeat(2, minmax(auto, 1fr))"} gap={4} alignContent={"space-between"}
                 justifyItems={"stretch"} textAlign={"center"}>
-            <GridItem colSpan={[-1, 2]}>
+            <GridItem colSpan={2}>
               <Heading fontSize={"4xl"} color={"orange.500"} noOfLines={1}>Softwarovy vyvoj</Heading>
             </GridItem>
             <DataBox name={"Diskretni matematika"} link={"https://unicornuniversity.net/cs/discrete-mathematics"}
@@ -48,9 +48,10 @@ export default function StudyPrograms() {
             </GridItem>
           </Grid>
 
-          <Grid templateColumns={"repeat(2, minmax(auto, 1fr))"} gap={4} alignContent={"space-between"} justifyItems={"stretch"}
+          <Grid templateColumns={"repeat(2, minmax(auto, 1fr))"} gap={4} alignContent={"space-between"}
+                justifyItems={"stretch"}
                 textAlign={"center"}>
-            <GridItem colSpan={[-1, 2]}>
+            <GridItem colSpan={2}>
               <Heading fontSize={"4xl"} color={"blue.500"} noOfLines={1}>Business Management</Heading>
             </GridItem>
             <DataBox name={"Diskretni matematika"} link={"https://unicornuniversity.net/cs/discrete-mathematics"}
@@ -76,7 +77,7 @@ export default function StudyPrograms() {
           <GridItem colSpan={2}>
             <Grid templateColumns={"repeat(2, 1fr)"} gap={4} alignContent={"start"} justifyItems={"stretch"}
                   textAlign={"center"} m={2}>
-              <GridItem colSpan={[-1, 2]}>
+              <GridItem colSpan={2}>
                 <Heading fontSize={"4xl"} color={"gray.500"}>Volitelne</Heading>
               </GridItem>
               <DataBox name={"Cambridge English"}
